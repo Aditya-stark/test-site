@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from "./assets/M-removebg.png";
 
 const Services: FC = () => {
   // Service data for easy management
@@ -20,7 +21,8 @@ const Services: FC = () => {
         "Content strategy development",
         "Backlink building",
         "Regular performance reporting"
-      ]
+      ],
+      link: "/services/seo"
     },
     {
       title: "SMO",
@@ -38,7 +40,8 @@ const Services: FC = () => {
         "Influencer outreach",
         "Paid social campaigns",
         "Performance analytics and reporting"
-      ]
+      ],
+      link: "/services/smo"
     },
     {
       title: "Performance Marketing",
@@ -56,7 +59,8 @@ const Services: FC = () => {
         "Conversion rate optimization",
         "A/B testing",
         "ROI analysis and reporting"
-      ]
+      ],
+      link: "/services/performance-marketing"
     },
     {
       title: "Content Marketing",
@@ -74,7 +78,8 @@ const Services: FC = () => {
         "Whitepaper and e-book production",
         "Video content creation",
         "Content distribution and promotion"
-      ]
+      ],
+      link: "/services/content-marketing"
     }
   ];
 
@@ -119,28 +124,12 @@ const Services: FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navbar */}
-      <nav className="bg-white shadow-md fixed w-full z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <Link to="/" className="text-xl font-bold text-[#003579]">M AVENUE</Link>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link to="/about" className="text-[#01014b] hover:text-[#0ba5bf] font-medium">About</Link>
-              <Link to="/services" className="text-[#0ba5bf] font-medium">Services</Link>
-              <Link to="/#goal" className="text-[#01014b] hover:text-[#0ba5bf] font-medium">Goals</Link>
-              <Link to="/#marketing" className="text-[#01014b] hover:text-[#0ba5bf] font-medium">Digital Marketing</Link>
-              <Link to="/contact" className="bg-[#0ba5bf] text-white px-4 py-2 rounded-full hover:bg-[#00e3f5] transition duration-300">Contact Us</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+     
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 bg-gradient-to-r from-[#01014b] to-[#320048]">
         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&q=75')] bg-cover bg-center"></div>
-        <div className="relative z-10 max-w-6xl mx-auto px-4 pt-20 text-center text-white">
+        <div className="relative max-w-6xl mx-auto px-4 pt-20 text-center text-white">
           <h1 className="text-5xl font-bold mb-6">Our Services</h1>
           <p className="text-lg text-gray-200 max-w-3xl mx-auto">
             Comprehensive digital solutions tailored to help your business grow and succeed in the digital landscape
@@ -187,7 +176,7 @@ const Services: FC = () => {
                   </ul>
                   
                   <div className="text-center">
-                    <Link to="/contact" className="inline-block px-6 py-3 bg-[#003579] text-white rounded-full hover:bg-[#0ba5bf] transition duration-300">
+                    <Link to={service.link} className="inline-block px-6 py-3 bg-[#003579] text-white rounded-full hover:bg-[#0ba5bf] transition duration-300">
                       Learn More
                     </Link>
                   </div>
@@ -362,48 +351,6 @@ const Services: FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#01014b] text-white pt-16 pb-6">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <h3 className="text-xl font-bold mb-2">M AVENUE TECHNOSOFT</h3>
-              <p className="text-[#00e3f5] font-medium">INSPIRE. INNOVATE. CONNECT.</p>
-              <p className="mt-4 text-gray-300">
-                Leading the way in IT solutions and digital transformation.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4 border-b border-[#0ba5bf] pb-2">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><Link to="/about" className="text-gray-300 hover:text-[#00e3f5] transition duration-300">About Us</Link></li>
-                <li><Link to="/services" className="text-gray-300 hover:text-[#00e3f5] transition duration-300">Services</Link></li>
-                <li><Link to="/#marketing" className="text-gray-300 hover:text-[#00e3f5] transition duration-300">Digital Marketing</Link></li>
-                <li><Link to="/#goal" className="text-gray-300 hover:text-[#00e3f5] transition duration-300">Our Goal</Link></li>
-              </ul>
-            </div>
-            <div id="contact">
-              <h4 className="text-lg font-bold mb-4 border-b border-[#0ba5bf] pb-2">Contact Us</h4>
-              <p className="mb-2 flex items-center text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#0ba5bf]" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                info@mavenuetechnosoft.com
-              </p>
-              <p className="mb-2 flex items-center text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#0ba5bf]" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                +91 1234567890
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-            <p>&copy; 2025 M AVENUE TECHNOSOFT PVT LTD. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
