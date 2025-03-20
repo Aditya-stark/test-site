@@ -1,15 +1,5 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import logoImage from "./assets/M-removebg.png"; // Add this
-
-// Define color variables for consistency
-const colors = {
-  primaryDarkBlue: "#003579",
-  tealBlue: "#0ba5bf",
-  deepBlue: "#01014b",
-  darkPurple: "#320048",
-  brightCyan: "#00e3f5",
-};
 
 const HomePage: FC = () => {
   return (

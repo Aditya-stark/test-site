@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import logoImage from "./assets/M-removebg.png";
 
 const AboutUs: FC = () => {
   return (

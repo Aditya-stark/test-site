@@ -35,13 +35,6 @@ const Smo: FC = () => {
     }
   ];
 
-  const platforms = [
-    { name: "Facebook", icon: "facebook.svg", color: "bg-blue-600" },
-    { name: "Instagram", icon: "instagram.svg", color: "bg-pink-600" },
-    { name: "Twitter", icon: "twitter.svg", color: "bg-blue-400" },
-    { name: "LinkedIn", icon: "linkedin.svg", color: "bg-blue-700" },
-  ];
-
   return (
     <>
       {/* Hero Section */}

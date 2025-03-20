@@ -1,5 +1,4 @@
 import { FC, useState } from 'react';
-import logoImage from "./assets/M-removebg.png";
 
 const ContactUs: FC = () => {
   const [formData, setFormData] = useState({
